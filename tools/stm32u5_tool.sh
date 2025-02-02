@@ -18,7 +18,7 @@ fi
 # Run STM32_Programmer_CLI and remove color codes.
 prog_cli()
 {
-    echo ${PROG_BIN} --quietMode -c port=SWD "$@"
+    echo "${PROG_BIN}" --quietMode -c port=SWD "$@"
     ${PROG_BIN} --quietMode -c port=SWD "$@" | sed 's/\x1b\[[0-9;]*m//g'
 }
 
